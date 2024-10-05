@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常討論話題之感受前測問卷</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #57c35b;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>您好，感謝您參與這份問卷調查</h1>
+        <p>請點擊下方按鈕開始問卷。</p>
+        <button onclick="startQuestionnaire()">開始填寫
+        </button>
+    </div>
+
+    <script>
+        function startQuestionnaire() {
+            // 問卷連結數組
+            const questionnaireLinks = [
+                'https://www.surveycake.com/s/dgMoO',
+	            'https://www.surveycake.com/s/XgPBM',
+	            'https://www.surveycake.com/s/mg7bM',
+	            'https://www.surveycake.com/s/VMZnO',
+	            'https://www.surveycake.com/s/zrkzk',
+	            'https://www.surveycake.com/s/ZgZ1m',
+	            'https://www.surveycake.com/s/MAL2R',
+	            'https://www.surveycake.com/s/lg8O9',
+	            'https://www.surveycake.com/s/dgNrK',
+	            'https://www.surveycake.com/s/6z9Ny'
+            ];
+
+            // 隨機選擇一個問卷連結
+            const randomLink = questionnaireLinks[Math.floor(Math.random() * questionnaireLinks.length)];
+
+            // 重定向到選中的問卷
+            window.location.href = randomLink;
+        }
+    </script>
+</body>
+</html>
